@@ -1,59 +1,71 @@
-🧪 Voice Agent Lab
+# Voice Agent Lab
 
-Voice Agent Lab is an experimental playground for building, testing, and iterating on AI-powered voice agents end-to-end — from speech input to intelligent response and audio output.
+> An experimental lab for building end-to-end AI voice agents — from speech understanding to expressive speech synthesis.
 
-This repository focuses on practical pipelines, not demos:
-speech → representation → reasoning → synthesis.
+---
 
-🔧 What this repo explores
+## Overview
 
-🎙️ Speech processing & representation
+**Voice Agent Lab** is a hands-on experimentation space for designing, testing, and iterating on modern voice agents.  
+The focus is on **real, modular pipelines**, not toy demos.
 
-Audio ingestion, feature extraction (e.g. MFCCs, mel-spectrograms)
+This repo explores the full voice stack:
 
-Phase-aware audio reconstruction
+**Speech → Understanding → Reasoning → Synthesis**
 
-🧠 Intelligent agents
+---
 
-LLM-driven reasoning and dialogue flow
+## What’s Inside
 
-Emotion-aware and context-sensitive responses
+### 🎙 Speech & Audio
+- Audio ingestion and preprocessing  
+- Feature extraction (MFCCs, mel-spectrograms)  
+- Phase-aware audio reconstruction  
 
-🗣️ Text-to-Speech (TTS)
+### 🧠 Intelligence
+- LLM-driven reasoning and dialogue control  
+- Context-aware and emotion-aware responses  
 
-Neural TTS engines (including local inference setups)
+### 🗣 Speech Synthesis
+- Neural TTS (local inference setups)  
+- Prosody and emotion transfer experiments  
 
-Emotion transfer and expressiveness experiments
+### 🔁 Pipelines
+- ASR → reasoning → TTS workflows  
+- Latency-aware, GPU-friendly execution  
 
-🔁 End-to-end voice pipelines
+---
 
-ASR → reasoning → TTS
+## Design Philosophy
 
-Latency-aware, locally runnable workflows
+- **Local-first** whenever possible  
+- **Composable components**, not monoliths  
+- Built for **experimentation**, not polish  
+- Optimized for **learning and iteration**
 
-🎯 Goals
+---
 
-Build modular, hackable voice agents
+## Tech Stack
 
-Experiment with emotion, prosody, and expressiveness
+- Python  
+- Local LLMs  
+- ASR & TTS models  
+- Audio DSP libraries  
+- CUDA / GPU acceleration  
 
-Keep everything local-first where possible (GPU-friendly)
+---
 
-Serve as a research + engineering sandbox, not a black box
+## Project Status
 
-🧩 Tech stack (evolving)
+**⚠️ Experimental / Active Development**
 
-Python
+This repository is a lab environment.  
+Expect rapid iteration, breaking changes, and exploratory work.
 
-Local LLMs
+---
 
-ASR & TTS models
+## Why this exists
 
-Audio DSP libraries
+Most voice-agent examples stop at demos.  
+This repo exists to push deeper into **expressiveness, emotion, and real-world constraints**.
 
-GPU acceleration (CUDA)
-
-🚧 Status
-
-This is an active lab, not a polished product.
-Expect rapid iteration, breaking changes, and experimental ideas.
