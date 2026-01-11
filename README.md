@@ -1,71 +1,55 @@
 # Voice Agent Lab
 
-> An experimental lab for building end-to-end AI voice agents — from speech understanding to expressive speech synthesis.
+> A local-first RAG-powered voice agent built with small language models (sLMs), Chatterbox TTS, and a Streamlit interface.
 
 ---
 
 ## Overview
 
-**Voice Agent Lab** is a hands-on experimentation space for designing, testing, and iterating on modern voice agents.  
-The focus is on **real, modular pipelines**, not toy demos.
+**Voice Agent Lab** is a focused implementation of a **retrieval-augmented voice assistant** that combines:
 
-This repo explores the full voice stack:
+- **sLM-based reasoning**
+- **RAG for grounded responses**
+- **Chatterbox TTS for natural speech output**
+- **Streamlit** as the interactive UI layer
 
-**Speech → Understanding → Reasoning → Synthesis**
-
----
-
-## What’s Inside
-
-### 🎙 Speech & Audio
-- Audio ingestion and preprocessing  
-- Feature extraction (MFCCs, mel-spectrograms)  
-- Phase-aware audio reconstruction  
-
-### 🧠 Intelligence
-- LLM-driven reasoning and dialogue control  
-- Context-aware and emotion-aware responses  
-
-### 🗣 Speech Synthesis
-- Neural TTS (local inference setups)  
-- Prosody and emotion transfer experiments  
-
-### 🔁 Pipelines
-- ASR → reasoning → TTS workflows  
-- Latency-aware, GPU-friendly execution  
+The goal is to build a **practical, locally runnable voice agent** that can answer questions, reason over retrieved context, and respond with expressive synthesized speech.
 
 ---
 
-## Design Philosophy
+## Core Components
 
-- **Local-first** whenever possible  
-- **Composable components**, not monoliths  
-- Built for **experimentation**, not polish  
-- Optimized for **learning and iteration**
+### 🧠 Small Language Model (SLM)
+- Lightweight LLMs optimized for local inference
+- Used for intent understanding, reasoning, and response generation
+- Designed to run efficiently on consumer GPUs
 
----
+### 📚 Retrieval-Augmented Generation (RAG)
+- Vector-based document retrieval
+- Context injection into the sLM prompt
+- Enables domain-specific, grounded responses
 
-## Tech Stack
+### 🗣 Chatterbox TTS
+- Neural text-to-speech engine
+- Focus on natural prosody and clarity
+- Integrated directly into the response pipeline
 
-- Python  
-- Local LLMs  
-- ASR & TTS models  
-- Audio DSP libraries  
-- CUDA / GPU acceleration  
-
----
-
-## Project Status
-
-**⚠️ Experimental / Active Development**
-
-This repository is a lab environment.  
-Expect rapid iteration, breaking changes, and exploratory work.
+### 🖥 Streamlit Application
+- Simple, fast UI for interacting with the voice agent
+- Supports text input and spoken output
+- Acts as the orchestration layer for RAG → sLM → TTS
 
 ---
 
-## Why this exists
+## End-to-End Flow
 
-Most voice-agent examples stop at demos.  
-This repo exists to push deeper into **expressiveness, emotion, and real-world constraints**.
-
+```text
+User Input
+   ↓
+Retriever (RAG)
+   ↓
+Small Language Model (sLM)
+   ↓
+Chatterbox TTS
+   ↓
+Spoken Response (Streamlit)
